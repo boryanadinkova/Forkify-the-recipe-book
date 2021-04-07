@@ -10,20 +10,14 @@ import paginationView from './views/paginationView.js';
 import bookmarksView from './views/bookmarksView';
 import addRecipeView from './views/addRecipeView';
 
-// if (module.hot) {
-//   module.hot.accept();
-// }
-
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
 
     if (!id) return;
-
-    // render spinner
     recipeView.renderSpinner();
 
-    // Update results view to mark search result (same as 43, but only replacing changed data)
+    // Update results view to mark search result
     resultsView.update(model.getResultsPerPage());
 
     // Updating bookmarks view
@@ -56,8 +50,9 @@ const controlSearchResults = async function () {
     //  render initial pagination buttons
     paginationView.render(model.state.search);
   } catch (err) {
-    console.error(`💥💥💥 ${err} 💥💥💥`);
-    throw new Error(err);
+    // console.error(`💥💥💥 ${err} 💥💥💥`);
+    // throw new Error(err);
+    console.log(err);
   }
 };
 
