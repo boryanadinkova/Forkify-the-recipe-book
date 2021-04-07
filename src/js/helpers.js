@@ -29,20 +29,3 @@ export const AJAX = async function (url, uploadData = undefined) {
     err;
   }
 };
-
-// export const getJSON = async function (url) {
-
-// };
-
-// export const sendJSON = async function (url, uploadData) {
-//   try {
-//     const fetchPromise =
-//     const res = await Promise.race([fetchPromise, timeout(TIMEOUT_SEC)]);
-//     const data = await res.json();
-
-//     if (!res.ok) throw new Error(`${data.message}, (${res.status})`);
-//     return data;
-//   } catch (err) {
-//     throw err;
-//   }
-// };
